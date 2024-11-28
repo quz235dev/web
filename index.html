@@ -7,13 +7,13 @@
 </head>
 <body>
   <h1>PostMessage Example</h1>
-  <p>ver 0.01</p>
+  <p>ver 0.02</p>
   <button id="sendMessageButton">Send Message with object</button>
 
   <script>
     // ボタンのクリックイベントを設定
     document.getElementById("sendMessageButton").addEventListener("click", function () {
-      console.log("window.parent: ", window.parent)
+      console.log("window.parent.origin: ", window.parent.origin)
       const allowedOrigin = "https://eigyo-mfg.cybozu.com";
       if (window.parent && window.parent.origin === allowedOrigin) {
         // 親ページにメッセージを送信
