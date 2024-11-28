@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>PostMessage Example</h1>
-  <p>ver 0.03</p>
+  <p>ver 0.04</p>
   <button id="sendMessageButton">Send Message with object</button>
 
   <script>
@@ -16,7 +16,7 @@
       // 親ページにメッセージを送信
       window.parent.postMessage({
         type: "audio_source",
-        data: "s3_url"
+        data: "https://www.cs.t-kougei.ac.jp/av-media/lectures/amp/2/page080/x2.wav"
       }, "*");
       console.log("posted!!")
     });
