@@ -14,11 +14,14 @@
     // ボタンのクリックイベントを設定
     document.getElementById("sendMessageButton").addEventListener("click", function () {
       console.log("window.parent: ", window.parent)
-      // 親ページにメッセージを送信
-      window.parent.postMessage({
-        type: "audio_source",
-        data: "s3_url"
-      }, "*");
+      const allowedOrigin = "https://eigyo-mfg.cybozu.com";
+      if (window.parent && window.parent.origin === allowedOrigin) {
+        // 親ページにメッセージを送信
+        window.parent.postMessage({
+          type: "audio_source",
+          data: "s3_url"
+        }, "*");
+      }
       console.log("posted!!")
     });
   </script>
