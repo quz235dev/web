@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostMessage Example</title>
+</head>
+<body>
+  <h1>PostMessage Example</h1>
+  <p>Click the button below to send a message to the parent page:</p>
+  <button id="sendMessageButton">Send Message</button>
+
+  <script>
+    // ボタンのクリックイベントを設定
+    document.getElementById("sendMessageButton").addEventListener("click", function () {
+      // 親ページにメッセージを送信
+      window.parent.postMessage("Hello from iframe!", "*");
+    });
+  </script>
+</body>
+</html>
