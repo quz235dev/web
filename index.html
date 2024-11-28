@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alert Example</title>
+  <title>Button Alert Example</title>
 </head>
 <body>
-  <h1>Alert Example</h1>
-  <p>hello ! テストページ</p>
+  <h1>Button Alert Example</h1>
+  <p>Click the button below to see an alert:</p>
+  <button id="alertButton">Click Me!</button>
+
   <script>
-    alert("hello!");
+    // ボタンのクリックイベントを設定
+    document.getElementById("alertButton").addEventListener("click", function () {
+      alert("hello!");
+    });
   </script>
 </body>
 </html>
