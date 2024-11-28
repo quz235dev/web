@@ -13,6 +13,7 @@
   <script>
     // ボタンのクリックイベントを設定
     document.getElementById("sendMessageButton").addEventListener("click", function () {
+      console.log("window.parent: ", window.parent)
       // 親ページにメッセージを送信
       window.parent.postMessage({
         type: "audio_source",
